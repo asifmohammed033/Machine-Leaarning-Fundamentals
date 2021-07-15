@@ -1,0 +1,460 @@
+%config Completer.use_jedi = False
+
+working servers:
+
+cnn:
+lsof -ti:8891 | xargs kill -9
+ssh -i ~/ssl/mycert.pem -N -f -L 8891:localhost:8891 ubuntu@3.10.85.253
+ssh ubuntu@3.10.85.253
+
+source venvpipe1v1/bin/activate
+cd /
+jupyter lab --port 8891
+
+
+gpu test:
+lsof -ti:8890 | xargs kill -9
+ssh -i ~/ssl/mycert.pem -N -f -L 8890:localhost:8890 ubuntu@35.176.192.99
+ssh ubuntu@35.176.192.99
+To start jupyter:
+sudo mount /dev/xvdf /external-volume/
+source cuda100/bin/activate
+cd /
+jupyter lab --port 8890
+
+
+obsessory server password:
+lsof -ti:8891 | xargs kill -9
+ssh -i ~/ssl/mycert.pem -N -f -L 8891:localhost:8891 ubuntu@18.132.236.97
+ssh ubuntu@18.132.236.97
+
+level2 crawler server (EXPORT):
+lsof -ti:8895 | xargs kill -9
+ssh -i ~/ssl/mycert.pem -N -f -L 8895:localhost:8895 ubuntu@52.56.216.26
+ssh ubuntu@52.56.216.26
+
+Azure level2crawler
+
+lsof -ti:8896 | xargs kill -9
+ssh -i ~/ssl/mycert.pem -N -f -L 8896:localhost:8896 azureuser@13.94.224.108
+ssh azureuser@13.94.224.108
+
+
+Azure gpu server:
+lsof -ti:8888 | xargs kill -9
+ssh -i ~/ssl/azuregpumycert.pem -N -f -L 8888:localhost:8888 azureuser@13.95.116.104
+ssh azureuser@13.95.116.104
+
+
+
+lsof -ti:8887 | xargs kill -9
+ssh -i ~/ssl/mycert.pem -N -f -L 8887:localhost:8887 azureuser@13.80.151.175
+ssh azureuser@13.80.151.175
+
+cnn jupyter notebook password :  3820
+
+
+gpu: ubuntu@18.130.147.24
+
+lsof -ti:8890 | xargs kill -9
+ssh -i ~/ssl/mycert.pem -N -f -L 8890:localhost:8890 ubuntu@18.130.147.24
+ssh ubuntu@18.130.147.24
+
+Asif AWS credentials:
+https://712097059095.signin.aws.amazon.com/console
+asifm@kychub.com
+
+
+To run aml_adversemedia application:
+ssh ubuntu@api.ame.kychub.com
+cd /obsessory/repository/aml_adversemedia
+jps
+kill application (sudo kill -9 pid)
+nohup java -jar ame-application/target/ame-application-0.0.1.jar &
+
+
+
+To check if crawler is working: 
+ssh api.ame.kychub.com
+sudo docker ps : gives list of running docker containers 
+or check using postman
+
+
+
+
+Neo4j local server:
+username=neo4j
+password=S@#$FTR46d
+
+
+redis server setup:
+https://www.linode.com/docs/guides/install-and-configure-redis-on-centos-7/
+
+
+IP if this workspace::
+52.56.238.196
+
+to kill a process using port 8889
+lsof -ti:8889 | xargs kill -9
+
+
+how to start anaconda 
+
+$ source ~/work/anaconda3/bin/activate root
+$ anaconda-navigator
+
+
+opening jupyter notebook server
+
+ssh -i ~/ssl/mycert.pem -N -f -L 8890:localhost:8890 ubuntu@35.178.218.176
+ssh -i ~/ssl/mycert.pem -N -f -L 8890:localhost:8890 ubuntu@35.176.192.99
+
+copyinng files from local to server
+scp ~/Downloads/spanbert_large.tar.gz ubuntu@3.10.85.253:/home/ubuntu/AdverseMedia/Coreference_resolution/coref/coref
+copying files form server to local
+scp username@source:/location/to/file username@destination:/where/to/put
+
+opening jupyter server:
+1) On workspace: ssh -i ~/ssl/mycert.pem -N -f -L 8889:localhost:8889 ubuntu@18.130.147.24
+2) On server: jupyter notebook --certfile=~/ssl/mycert.pem --keyfile ~/ssl/mykey.key --port 8889
+make sure port numbers are same.
+3) on server: In terminal open https://localhost:8889/ in workspace browser
+ 
+
+
+aws management console:
+
+User name,Password,Access key ID,Secret access key,Console login link
+kychub-aml,rxoJYT9%DsN)l-B,AKIA2LTCK2ELVZJ33UUI,5a2z3aahJwR23KxTh4QwjGXWPeX5GNEnpiiIUKET,https://712097059095.signin.aws.amazon.com/console
+
+old:
+User name,Password,Access key ID,Secret access key,Console login link
+kychub-aml,Dy2b7Zs7SZSG233b,AKIA2LTCK2ELVZJ33UUI,5a2z3aahJwR23KxTh4QwjGXWPeX5GNEnpiiIUKET,https://712097059095.signin.aws.amazon.com/console
+
+sakera AWS account creds:
+password : Asif@k12c
+https://712097059095.signin.aws.amazon.com/console
+sakerad@kychub.com
+
+Zyte password:
+user: asifm@kychub.com
+password : @SifZyte123
+
+
+
+Doccano
+link : http://3.10.85.253:8000/
+user : admin
+password : @Sif@doccano
+@Sif@doccano
+
+GENERAL PURPOSE LINUX COMMANDS:
+1. to check size of file 
+	$ du --max-depth=1 <file name> -h
+du -sh * | sort -hr
+
+linting:
+%load_ext pycodestyle_magic
+%%pycodestyle
+a=1
+
+
+to check memory left
+df -h
+
+2. To create a python virtual environment
+python3 -m venv <name_of_virtualenv>
+
+python3 -m venv roberta
+
+To install specific python version
+
+
+1. sudo apt install build-essential zlib1g-dev libncurses5-dev libsqlite3-dev libgdbm-dev libnss3-dev libssl-dev liblzma-dev libreadline-dev libffi-dev wget libbz2-dev
+2. cd ~
+3. mkdir tmp
+4. cd /tmp
+5. wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz
+6. tar xzf Python-3.7.9.tgz
+7. cd Python-3.7.9
+8. ./configure --enable-optimizations
+9. make altinstall  (may need to keep sudo)
+10. rm /tmp/Python-3.7.9.tgz
+11. python3.7 -V
+
+https://tecadmin.net/install-python-3-7-on-centos/
+
+
+To kill all chrome-browsers
+ps aux | grep chromium-browser | awk ' { print $2 } ' | xargs kill -9
+
+
+DOCKER COMMANDS:
+
+*To delete docker images:
+	docker images -a
+	docker rmi Image Image
+
+to force remove 
+docker rmi -f <image_id>
+
+
+to delete docker service:
+docker service rm 
+
+to build docker without cache:
+docker build --no-cache . -t  <dockername>
+
+to create a docker swarm:
+docker swarm init --advertise-addr 127.0.0.1
+
+to create a docker service:
+docker service create --name mediammind-service --replicas=1 -p 8001:8001 mediamind:v12
+
+to empty unused docker resources from /var/lib/docker
+docker system prune
+https://docs.docker.com/config/pruning/
+
+
+Putting docker in lambda
+# tag 
+docker tag mediamind:v10 712097059095.dkr.ecr.eu-west-2.amazonaws.com/mediamind:v10
+# authenticate
+aws ecr get-login-password | docker login --username AWS --password-stdin 712097059095.dkr.ecr.eu-west-2.amazonaws.com
+# push
+docker push 712097059095.dkr.ecr.eu-west-2.amazonaws.com/mediamind:v10
+
+
+
+
+To monitor cpuusage:
+htop
+
+To monitor gpu usage
+nvidia-smi -q -g 0 -d UTILIZATION -l
+or
+gpustat -cp --watch
+
+
+To stop a nohup process:
+ps ax | grep <filename.py>
+kill -9 PID
+
+
+To mount external volume after server restart
+sudo mount /dev/xvdf /external_volume
+
+
+
+
+Using a virtual environment with Jupyter notebook
+VENV_NAME = "YOUR VIRTUAL ENV NAME"
+1) virtualenv VENV_NAME
+2) source venv/bin/activate
+3) Add this package if not present: pip3 install ipykernel
+4) Then execute this command: ipython kernel install --user --name=VENV_NAME
+5) Now open up the Jupyter Notebook and in change kernel select VENV_NAME
+
+
+
+To setup cuda :
+https://www.pugetsystems.com/labs/hpc/How-To-Install-CUDA-10-together-with-9-2-on-Ubuntu-18-04-with-support-for-NVIDIA-20XX-Turing-GPUs-1236/
+
+Doccano:
+
+admin:
+username: admin
+password: password
+
+user: captainAmerica
+password: vibranium@123
+
+user: ironMan
+password: iAmIronMan@3000
+
+
+
+
+
+To start doccano server
+1. activate conda base
+2. doccano
+
+To add users:  https://github.com/doccano/doccano/issues/452
+1. Create a new user from the admin page.
+2. Add the user to a project by the project member management page(/projects/{id}/users/).
+
+
+
+
+
+Doccano password   (CNN server)
+user : asifm@marvel
+password : @Sif@doccano
+@Sif@doccano
+
+
+
+user: captainAmerica
+password: vibranium@123
+
+user: ironMan
+password: iAmIronMan@3000
+
+
+Zyte Credentials:
+username: asifm
+password: @sifZyte@123
+
+
+
+steps to generate AED Dataset:
+1. Goto cnn server production/mediamind/pipe1/data/esPipeline1Dump2April/ElasticSearchDataDumpWithScroll.ipynb and open it
+2. set start and end index in for loop abd generate a CSV file
+3. goto /production/mediamind/pipe1/adverseEntityDataGeneration.ipynb
+4. load the previously generated CSV file
+5. generate a json file ex: aed5May8.json
+
+to install cuda 10
+https://fmorenovr.medium.com/installing-successfully-cuda-10-1-and-tensorflow-1-14-to-enable-gpu-processing-1b220dcb23b9
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+to install CUDA
+https://www.pugetsystems.com/labs/hpc/How-To-Install-CUDA-10-together-with-9-2-on-Ubuntu-18-04-with-support-for-NVIDIA-20XX-Turing-GPUs-1236/
+
+To determine which distribution and release number you’re running, type the following at the command line:
+uname -m && cat /etc/*release
+
+
+
+
+
+
+
+
+
+
+
+ubuntu@ip-172-31-0-180:/external-volume/production/mediamind1$ sudo docker service create --name mediamind-service --replicas=1 -p 8001:8001 mediamind1
+
+
+
+
+
+
+To install python :
+https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/
+
+
+While loading coref ::
+NotFoundError: /external-volume/production/mediamind/pipe1/coref2/coref_kernels.so: undefined symbol: _ZN10tensorflow12OpDefBuilder4AttrENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+
+fix::
+Some g++ versions may not play nicely with this repo. If you get this: tensorflow.python.framework.errors_impl.NotFoundError: ./coref_kernels.so: undefined symbol: _ZN10tensorflow12OpDefBuilder4AttrESs, try removing the flag -D_GLIBCXX_USE_CXX11_ABI=0 from setup_all.sh. Thanks to Naman Jain for the solution.
+
+ModuleNotFoundError: No module named 'en_core_web_sm'
+python -m spacy download en_core_web_sm (try first)
+pip3 install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz
+
+
+
+OSError: [E053] Could not read config.cfg from /home/azureuser/pipe1/lib/python3.7/site-packages/en_core_web_sm/en_core_web_sm-2.2.0/config.cfg
+python3.7 -m spacy download en_core_web_trf
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+scp ubuntu@35.178.218.176:/external-volume/asif/media-intelligence-algorithm/News_Com_features1.xlsx ~/Downloads
+doesnt work
+
+
+
+
+35.178.218.176 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBD4Vq1IsP65AUwN6FgL6bpVGqvfFEbBNoOj/AOveCNvQraIvtctG5a8tx1Nxrt9CphKgnmw2tonoh0IPUalttYQ=
+
+
+
+
+ssh -i ~/ssl/mycert.pem -N -f -L 8888:localhost:8888  ubuntu@18.130.147.24
+
+
+scp -r ~/1_KYChub/Translation  ubuntu@3.10.85.253:/external-volume
+scp -r ubuntu@3.10.85.253:/external-volume/AdverseMedia/Adverse Media Trial run ~/1_KYChub/trial 
+
+chown -R $USER:$USER /external-volume
+
+
+scp /external-volume/production/mediamind/pipe1  ubuntu@18.132.236.97:/external-volume/production/mediamind/
+
+
+
+
+
+cp  /external-volume/AdverseMedia/Adverse_Media_Trial_run/Entity_conf  /external-volume/AdverseMedia/Trial_run/Trail/production/Entity_conf
+
+
+scp -r /home/asifm/1_KYChub/production/tagger  ubuntu@18.130.147.24:/external-volume
+
+
+
+
+
+
+
+
+
+
+Postgres 
+
+sudo -u postgres psql
+
+sudo mv /home/asifm/Downloads/GeoLite2-City.mmdb /obsessory/resources/ame/geolocation
+
+***************************
+
+psql commands
+
+
+all databases
+\l
+
+all tables
+\dt
+
+describe table
+\d tablename
+
+list available schema
+\dn
+
+list of available functions
+\
+
+
+
+
+
+
+
+
+/home/ubuntu/spark-3.0.1-bin-hadoop2.7
+scp ubuntu@52.56.175.9:/home/ubuntu/neo4j-community-3.5.11.zip
+
+
+
+
+
+
+dbms.security.procedures.whitelist=apoc.coll.*,apoc.load.*
+
+
+
+
+
+
+
+/dev/nvme1n1: UUID="6c739aa5-45ca-4ec5-bf43-caab8ce287dc" TYPE="xfs"
+
+UUID=6c739aa5-45ca-4ec5-bf43-caab8ce287dc  /external-volume  xfs  defaults,nofail  0  2
+
+scp -r /externa username@destination:/where/to/put
+
